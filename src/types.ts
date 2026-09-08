@@ -36,6 +36,17 @@ export interface Project {
   github?: string;
 }
 
+export interface Service {
+  id: string;
+  title: string;
+  tagline: string;
+  category: "Full-Stack" | "Data Engineering" | "Python & Architecture" | "AI & Cloud";
+  description: string;
+  deliverables: string[];
+  techStack: string[];
+  icon: string;
+}
+
 export interface Profile {
   name: string;
   role: string;

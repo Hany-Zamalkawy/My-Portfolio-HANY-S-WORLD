@@ -106,6 +106,44 @@ export default function ResumeModal({
       // 2. EXPERIANCE
       renderSectionHeader("EXPERIANCE");
 
+      // National Telecommunication Institute (NTI)
+      checkPageBreak(25);
+      doc.setFont("times", "bold");
+      doc.setFontSize(10);
+      doc.text("• Python Developer Intern | National Telecommunication Institute (NTI) | Aug 2026 – Present", margin, y);
+      y += 5;
+      
+      doc.setFont("times", "normal");
+      doc.setFontSize(9.5);
+      doc.text("•", margin + 6, y);
+      writeWrappedText("Participating in the prestigious NTI & ITIDA Summer Training Program as a Python Developer, building Python-based solutions and optimizing application performance.", 9.5, false, "left", 10);
+      y += 1;
+
+      doc.setFont("times", "normal");
+      doc.setFontSize(9.5);
+      doc.text("•", margin + 6, y);
+      writeWrappedText("Actively applying modern software architecture principles to real-world projects, complementing skill sets as a Full-Stack Developer and Data Engineer.", 9.5, false, "left", 10);
+      y += 4;
+
+      // Digital Egypt Pioneers Initiative (DEPI)
+      checkPageBreak(25);
+      doc.setFont("times", "bold");
+      doc.setFontSize(10);
+      doc.text("• Data Engineer Intern | Digital Egypt Pioneers Initiative (DEPI) | Jul 2026 – Present | Alexandria, Egypt", margin, y);
+      y += 5;
+      
+      doc.setFont("times", "normal");
+      doc.setFontSize(9.5);
+      doc.text("•", margin + 6, y);
+      writeWrappedText("Undergoing intensive specialization in Data Engineering in the DEPI (Batch R5) program to bridge the gap between business operations and technical architecture.", 9.5, false, "left", 10);
+      y += 1;
+
+      doc.setFont("times", "normal");
+      doc.setFontSize(9.5);
+      doc.text("•", margin + 6, y);
+      writeWrappedText("Focusing on building high-performance data systems, scalable infrastructure, and robust data pipelines.", 9.5, false, "left", 10);
+      y += 4;
+
       // FlyRank AI
       checkPageBreak(22);
       doc.setFont("times", "bold");
@@ -224,12 +262,29 @@ export default function ResumeModal({
       doc.setFontSize(9.5);
       doc.text("•", margin + 3, y);
       writeWrappedText("Deployed the project using Git and GitHub Pages, following responsive design and clean coding best practices.", 9.5, false, "left", 7);
+      y += 4;
 
-      // --- PAGE 2 ---
-      doc.addPage();
-      y = 15;
+      // PROJECTS (HANY'S WORLD, FarmFlow, VOLT Sports, Artisan Table)
+      checkPageBreak(25);
+      doc.setFont("times", "bold");
+      doc.setFontSize(10);
+      doc.text("HANY'S WORLD — Cyber-Minimalist Portfolio & Interactive Resume", margin, y);
+      y += 5;
 
-      // PROJECTS (VOLT Sports & Artisan Table)
+      doc.setFont("times", "normal");
+      doc.setFontSize(9.5);
+      doc.text("•", margin + 3, y);
+      writeWrappedText("Engineered an interactive terminal shell portfolio and developer hub using React, Tailwind CSS, Framer Motion, and high-fidelity mock-ups. Features interactive CLI simulations, custom PDF export, and responsive animations.", 9.5, false, "left", 7);
+      y += 1;
+
+      doc.setFont("times", "normal");
+      doc.setFontSize(9.5);
+      doc.text("•", margin + 3, y);
+      writeWrappedText("Technologies used: React, TypeScript, Tailwind CSS, Framer Motion, Vite.", 9.5, false, "left", 7);
+      y += 4;
+
+      // VOLT Sports
+      checkPageBreak(25);
       doc.setFont("times", "bold");
       doc.setFontSize(10);
       doc.text("VOLT Sports — Full-Stack Sports Analysis Platform", margin, y);
@@ -275,6 +330,25 @@ export default function ResumeModal({
       doc.setFontSize(9.5);
       doc.text("•", margin + 3, y);
       writeWrappedText("Technologies used: React, JavaScript, HTML/CSS, GitHub.", 9.5, false, "left", 7);
+      y += 4;
+
+      // FarmFlow (NTI)
+      checkPageBreak(25);
+      doc.setFont("times", "bold");
+      doc.setFontSize(10);
+      doc.text("FarmFlow — Python-Powered Farm-to-Consumer Commerce & Inventory | NTI", margin, y);
+      y += 5;
+
+      doc.setFont("times", "normal");
+      doc.setFontSize(9.5);
+      doc.text("•", margin + 3, y);
+      writeWrappedText("Developed as part of the National Telecommunication Institute (NTI) Summer Internship, powering direct farm-to-consumer commerce and inventory workflows.", 9.5, false, "left", 7);
+      y += 1;
+
+      doc.setFont("times", "normal");
+      doc.setFontSize(9.5);
+      doc.text("•", margin + 3, y);
+      writeWrappedText("Technologies used: Python, E-Commerce, Inventory Management, Git, GitHub Pages.", 9.5, false, "left", 7);
       y += 2;
 
       // EDUCATION
@@ -326,8 +400,8 @@ export default function ResumeModal({
       y += 5;
 
       const skillsList = [
-        { label: "Programming & Web Development", val: "HTML, CSS, JavaScript, React, Full-Stack Web Development" },
-        { label: "Software Engineering", val: "Software Engineering Principles, Data Pipeline Concepts, Git, GitHub" },
+        { label: "Programming & Web Development", val: "HTML, CSS, JavaScript, React, Python, Full-Stack Web Development" },
+        { label: "Software Engineering", val: "Software Engineering Principles, Software Architecture, Data Engineering & Pipelines, Git, GitHub" },
         { label: "Cloud & AI", val: "Cloud Computing, Google Cloud Platform (GCP) Fundamentals, AI-Assisted Development, GitHub Copilot, Prompt Engineering, Large Language Models (LLMs)" },
         { label: "Automation & Data", val: "Workflow Automation, Data Visualization, Microsoft Excel, Database Fundamentals, Information Security" },
         { label: "Professional Skills", val: "Technical Problem-Solving, Team Collaboration, Professional Communication, Client Relations, Sales, Behavioral Interview Preparation" }
@@ -652,6 +726,26 @@ ${projects
             `).join("")}
           </div>
         </div>
+
+        <!-- Featured Projects -->
+        <div class="space-y-4 pt-4 border-t border-gray-200">
+          <h2 class="font-mono text-xs text-emerald-600 uppercase tracking-wider font-bold border-b border-gray-200 pb-1">
+            Featured Projects
+          </h2>
+          <div class="space-y-4">
+            ${projects.map((proj) => `
+              <div class="space-y-1">
+                <div class="flex justify-between items-start flex-wrap gap-1">
+                  <div class="font-bold text-gray-900 text-xs">${proj.title}</div>
+                  <span class="font-mono text-[9px] text-emerald-600">${proj.category}</span>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">${proj.description}</p>
+                <div class="text-[10px] font-mono text-gray-500">Skills: ${proj.skills.join(", ")}</div>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -939,6 +1033,41 @@ ${projects
                   ))}
                 </div>
               </div>
+
+              {/* Featured Technical Projects */}
+              <div className="space-y-4 pt-4 border-t border-[#3d4a3d]/20 print:border-black/20">
+                <h2 className="font-mono text-xs text-[#4be277] uppercase tracking-wider font-bold border-b border-[#3d4a3d]/20 pb-1 print:text-black print:border-black/20">
+                  {lang === "en" ? "Featured Technical Projects" : "أبرز المشاريع التقنية"}
+                </h2>
+                <div className="space-y-4">
+                  {projects.map((proj) => (
+                    <div key={proj.id} className="space-y-1">
+                      <div className="flex justify-between items-start flex-wrap gap-1">
+                        <h3 className="font-sans text-xs font-bold text-white print:text-black">
+                          {proj.title}
+                        </h3>
+                        <span className="font-mono text-[9px] text-[#4be277] print:text-neutral-600">
+                          {proj.category}
+                        </span>
+                      </div>
+                      <p className="text-[11px] text-[#bccbb9]/90 print:text-black/80 leading-relaxed">
+                        {proj.description}
+                      </p>
+                      <div className="flex flex-wrap gap-1 pt-1">
+                        {proj.skills.map((s, sIdx) => (
+                          <span
+                            key={sIdx}
+                            className="text-[9px] font-mono text-[#bccbb9]/70 print:text-neutral-700 bg-[#161d16] print:bg-transparent px-1.5 py-0.5 rounded-sm border border-[#3d4a3d]/40 print:border-none"
+                          >
+                            {s}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
             </div>
 
           </div>

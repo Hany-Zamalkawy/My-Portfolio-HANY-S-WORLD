@@ -1,4 +1,4 @@
-import { Skill, Experience, Education, Certification, Project, Profile } from "./types";
+import { Skill, Experience, Education, Certification, Project, Profile, Service } from "./types";
 
 export const initialProfile: Profile = {
   name: "Moustafa Hany Azab",
@@ -30,6 +30,8 @@ export const skillsData: Skill[] = [
   { name: "Flutter", category: "Frameworks" },
   { name: "Full-Stack Development", category: "Frameworks" },
   { name: "Software Engineering", category: "Frameworks" },
+  { name: "Software Architecture", category: "Frameworks" },
+  { name: "Performance Optimization", category: "Frameworks" },
   
   // Cloud / DevOps / AI
   { name: "Cloud Computing", category: "Cloud/DevOps" },
@@ -49,10 +51,35 @@ export const skillsData: Skill[] = [
   { name: "MongoDB", category: "Databases" },
   { name: "Firebase", category: "Databases" },
   { name: "Database Fundamentals", category: "Databases" },
+  { name: "Data Engineering", category: "Databases" },
   { name: "Workflow Automation", category: "Databases" }
 ];
 
 export const experiencesData: Experience[] = [
+  {
+    id: "exp-nti",
+    period: "Aug 2026 — Present",
+    role: "Python Developer",
+    company: "National Telecommunication Institute (NTI) · Internship",
+    bullets: [
+      "Participating in the prestigious NTI & ITIDA Summer Training Program as a Python Developer.",
+      "Gaining practical, hands-on experience in building Python-based solutions and optimizing application performance.",
+      "Actively applying modern software architecture principles to real-world projects, complementing my journey as a Full-Stack Developer and Data Engineer."
+    ],
+    skillsUsed: ["Python", "Software Architecture", "Performance Optimization", "Full-Stack Development", "Data Engineering"]
+  },
+  {
+    id: "exp-depi",
+    period: "Jul 2026 — Present",
+    role: "Data Engineer",
+    company: "Digital Egypt Pioneers Initiative - DEPI · Internship",
+    bullets: [
+      "Selected for the intensive DEPI (Batch R5) specialization in Data Engineering to bridge the gap between business operations and technical architecture.",
+      "Focusing on building high-performance data systems, robust data pipelines, and scalable infrastructure.",
+      "Applying advanced database fundamentals and software architecture principles to real-world analytical systems."
+    ],
+    skillsUsed: ["Data Engineering", "Python", "Database Fundamentals", "Software Engineering", "Full-Stack Development"]
+  },
   {
     id: "exp-1",
     period: "Jun 2026 — Present",
@@ -142,6 +169,24 @@ export const certificationsData: Certification[] = [
 export const projectsData: Project[] = [
   {
     id: "proj-1",
+    title: "HANY'S WORLD — Cyber-Minimalist Portfolio & Interactive Resume",
+    description: "Designed and built an interactive terminal shell portfolio and developer hub using React, Tailwind CSS, Framer Motion, and high-fidelity mock-ups. Features interactive command-line simulations, printable custom PDF resume view, and sleek animations.",
+    category: "Full-Stack",
+    skills: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite"],
+    link: "https://hany-s-world-597716960036.europe-west2.run.app/",
+    github: "https://github.com/Hany-Zamalkawy/My-Portfolio-HANY-S-WORLD"
+  },
+  {
+    id: "proj-2",
+    title: "FarmFlow — Python-Powered Farm-to-Consumer Commerce & Inventory System | NTI",
+    description: "Farm Flow: A Python project developed as part of the National Telecommunication Institute (NTI) Summer Internship, powering direct farm-to-consumer commerce and inventory workflows.",
+    category: "Full-Stack",
+    skills: ["Python", "E-Commerce", "Inventory Management", "Git", "GitHub Pages"],
+    link: "https://hany-zamalkawy.github.io/NTI_Summer_Intership_Project/",
+    github: "https://github.com/Hany-Zamalkawy/NTI_Summer_Intership_Project"
+  },
+  {
+    id: "proj-3",
     title: "Leon — Creative Digital Agency Template",
     description: "Developed a modern, responsive one-page website for a creative digital agency using HTML5, CSS3, and Vanilla JavaScript. Implemented interactive features including scroll animations, a filterable portfolio, and sticky navigation. Deployed the project using Git and GitHub Pages.",
     category: "Full-Stack",
@@ -150,7 +195,7 @@ export const projectsData: Project[] = [
     github: "https://github.com/Hany-Zamalkawy/Leon-Agency"
   },
   {
-    id: "proj-2",
+    id: "proj-4",
     title: "VOLT Sports — Full-Stack Sports Analysis Platform",
     description: "Developed a sports analysis web application to process, manage, and visualize athletic performance data. Applied software engineering principles to build a structured, responsive, and user-friendly application.",
     category: "Full-Stack",
@@ -159,21 +204,106 @@ export const projectsData: Project[] = [
     github: "https://github.com/Hany-Zamalkawy/-VOLT-Sports"
   },
   {
-    id: "proj-3",
+    id: "proj-5",
     title: "Artisan Table — Full-Stack Restaurant Web Application",
     description: "Developed a responsive web platform featuring interactive menus and structural ordering layouts. Engineered modular front-end components and version-controlled the repository to ensure seamless continuous integration.",
     category: "Full-Stack",
     skills: ["React", "JavaScript", "HTML", "CSS", "GitHub"],
     link: "https://hany-zamalkawy.github.io/restaurant_Artisan_Table/",
     github: "https://github.com/Hany-Zamalkawy/restaurant_Artisan_Table"
-  },
-  {
-    id: "proj-4",
-    title: "HANY'S WORLD — Cyber-Minimalist Portfolio & Interactive Resume",
-    description: "Designed and built an interactive terminal shell portfolio and developer hub using React, Tailwind CSS, Framer Motion, and high-fidelity mock-ups. Features interactive command-line simulations, printable custom PDF resume view, and sleek animations.",
-    category: "Full-Stack",
-    skills: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite"],
-    link: "https://ais-pre-avz2uzcj7jccimh54iaavt-101895778468.europe-west2.run.app",
-    github: "https://github.com/Hany-Zamalkawy/My-Portfolio-HANY-S-WORLD"
   }
 ];
+
+export const servicesData: Service[] = [
+  {
+    id: "srv-fullstack",
+    title: "Full-Stack Web Engineering",
+    tagline: "End-to-end resilient web applications engineered for speed, modularity, and high-load scalability.",
+    category: "Full-Stack",
+    description: "Architecting and implementing modern web applications from responsive front-end user experiences to robust, scalable backend APIs. Utilizing clean component design systems, state management, and production-ready deployments.",
+    deliverables: [
+      "Custom Single Page Applications (SPA) & Micro-frontends",
+      "RESTful & GraphQL Backend API Engineering",
+      "Interactive Client Dashboards & Real-time UI Flows",
+      "Cross-Platform Responsive Optimization & Accessibility"
+    ],
+    techStack: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Express", "Vite"],
+    icon: "Layers"
+  },
+  {
+    id: "srv-data-eng",
+    title: "Data Engineering & Pipeline Architecture",
+    tagline: "High-performance ETL/ELT pipelines, data transformation, and reliable analytical storage systems.",
+    category: "Data Engineering",
+    description: "Specialized in designing resilient data pipelines and data warehousing infrastructures based on DEPI Batch R5 specialization. Transforming raw unstructured data into clean, query-optimized assets bridging business operations with technical architecture.",
+    deliverables: [
+      "Automated Batch & Stream ETL/ELT Data Pipelines",
+      "Data Warehouse Schema Design & Performance Tuning",
+      "Data Cleaning, Deduplication, and Validation Pipelines",
+      "Analytical Data Models & Business Intelligence Feeders"
+    ],
+    techStack: ["Python", "SQL", "PostgreSQL", "Database Fundamentals", "Workflow Automation"],
+    icon: "Database"
+  },
+  {
+    id: "srv-python-backend",
+    title: "Python Solutions & Backend Architecture",
+    tagline: "High-throughput microservices, computational modules, and application performance optimization.",
+    category: "Python & Architecture",
+    description: "Formed through rigorous NTI & ITIDA Summer Training paradigms. Developing high-throughput Python backend systems and computational utilities while applying modern software architecture principles, algorithmic efficiency, and bottleneck elimination.",
+    deliverables: [
+      "High-Performance Python Web Services & APIs",
+      "Application Performance Profiling & Latency Reduction",
+      "SOLID Architectural Design & Modular Microservices",
+      "Asynchronous Task Workers & Background Schedulers"
+    ],
+    techStack: ["Python", "Software Architecture", "Performance Optimization", "Full-Stack Development"],
+    icon: "Terminal"
+  },
+  {
+    id: "srv-ai-agent",
+    title: "AI Integration & Intelligent Automation",
+    tagline: "Augmenting software products with LLM intelligence, search discovery agents, and automated workflows.",
+    category: "AI & Cloud",
+    description: "Leveraging hands-on backend AI engineering experience from FlyRank AI. Integrating Large Language Models (LLMs), AI discovery agents, and semantic search capabilities into web and enterprise workflows.",
+    deliverables: [
+      "Custom LLM API Integrations & Conversational Agents",
+      "Autonomous AI Web Discovery & Scraping Agents",
+      "Semantic Search & Dynamic Content Summarizers",
+      "Intelligent Business Workflow & Script Automation"
+    ],
+    techStack: ["Gemini API", "Prompt Engineering", "Python", "Cloud Computing", "Node.js"],
+    icon: "Sparkles"
+  },
+  {
+    id: "srv-db-optimization",
+    title: "Database Architecture & Optimization",
+    tagline: "Scalable relational and document data storage, index tuning, and high-availability schemas.",
+    category: "Data Engineering",
+    description: "Designing structured relational and NoSQL schemas (PostgreSQL, MongoDB, Firebase). Tuning database indices, crafting optimized queries, and implementing data integrity constraints to ensure sub-second response times.",
+    deliverables: [
+      "Relational (SQL) & Document (NoSQL) Schema Modeling",
+      "Query Execution Plan Analysis & Index Optimization",
+      "Secure Transactional Logic & Connection Pooling",
+      "Database Migration Strategies & Schema Versioning"
+    ],
+    techStack: ["PostgreSQL", "MongoDB", "Firebase", "SQL", "Database Fundamentals"],
+    icon: "Server"
+  },
+  {
+    id: "srv-cloud-devops",
+    title: "Cloud Deployment & DevOps Automation",
+    tagline: "Containerized deployments, automated CI/CD pipelines, and cloud infrastructure reliability.",
+    category: "AI & Cloud",
+    description: "Streamlining the bridge from local development to production through containerization, continuous integration/delivery (CI/CD) pipelines, cloud environment management, and production health monitoring.",
+    deliverables: [
+      "Docker Containerization & Multi-stage Builds",
+      "Automated CI/CD Pipelines via GitHub Actions",
+      "Cloud Ingress & Hosting Configuration (GCP, Vercel)",
+      "System Uptime Monitoring & Environment Security"
+    ],
+    techStack: ["Git", "GitHub Actions", "Docker", "Cloud Computing", "Vite"],
+    icon: "Cloud"
+  }
+];
+

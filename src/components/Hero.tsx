@@ -13,7 +13,7 @@ export default function Hero({ profile, onResumeClick, lang }: HeroProps) {
 
   return (
     <section
-      id="hero-root"
+      id="about"
       className="relative flex flex-col md:flex-row items-stretch min-h-[75vh] md:min-h-[70vh] rounded-2xl overflow-hidden border border-[#3d4a3d] bg-[#091009]/50 shadow-2xl"
     >
       {/* Overlay dot grid */}

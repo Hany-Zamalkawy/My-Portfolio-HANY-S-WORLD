@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import AboutCodeEditor from "./components/AboutCodeEditor";
 import SkillsSection from "./components/SkillsSection";
 import ExperienceTimeline from "./components/ExperienceTimeline";
 import EducationSection from "./components/EducationSection";
 import ProjectsShowcase from "./components/ProjectsShowcase";
+import ServicesSection from "./components/ServicesSection";
 import Footer from "./components/Footer";
 import ResumeModal from "./components/ResumeModal";
 
@@ -17,7 +17,9 @@ import {
   educationData,
   certificationsData,
   projectsData,
+  servicesData,
 } from "./data";
+import { enExperiences, arExperiences, enServices, arServices, enProjects, arProjects } from "./translations";
 
 export default function App() {
   // Reactive profile state that can be edited in real-time inside the AboutCodeEditor!
@@ -61,14 +63,6 @@ export default function App() {
     }
   }, [lang]);
 
-  const handleProfileUpdate = (updatedProfile: Profile) => {
-    setProfile(updatedProfile);
-  };
-
-  const handleResetProfile = () => {
-    setProfile(initialProfile);
-  };
-
   const handleSelectSkill = (skill: string | null) => {
     setSelectedSkill(skill);
   };
@@ -88,6 +82,10 @@ export default function App() {
       return next;
     });
   };
+
+  const currentExperiences = lang === "en" ? enExperiences : arExperiences;
+  const currentServices = lang === "en" ? enServices : arServices;
+  const currentProjects = lang === "en" ? enProjects : arProjects;
 
   return (
     <div className={`min-h-screen bg-[#0e150e] text-[#dce5d9] font-sans antialiased relative selection:bg-[#4be277]/30 selection:text-[#6bff8f] ${theme === "terminal-light" ? "light-terminal" : ""}`}>
@@ -115,14 +113,6 @@ export default function App() {
         {/* Landing Hero frame */}
         <Hero profile={profile} onResumeClick={() => setResumeOpen(true)} lang={lang} />
 
-        {/* Live editor and Terminal bash emulator section */}
-        <AboutCodeEditor
-          profile={profile}
-          onProfileUpdate={handleProfileUpdate}
-          onResetProfile={handleResetProfile}
-          lang={lang}
-        />
-
         {/* Skill visualizer */}
         <SkillsSection
           skills={skillsData}
@@ -133,9 +123,15 @@ export default function App() {
 
         {/* Journey Timeline */}
         <ExperienceTimeline
-          experiences={experiencesData}
+          experiences={currentExperiences}
           selectedSkill={selectedSkill}
           onSelectSkill={handleSelectSkill}
+          lang={lang}
+        />
+
+        {/* Specialized Engineering & Data Services */}
+        <ServicesSection
+          services={currentServices}
           lang={lang}
         />
 
@@ -144,7 +140,7 @@ export default function App() {
 
         {/* Interactive project sandbox showcase */}
         <ProjectsShowcase
-          projects={projectsData}
+          projects={currentProjects}
           selectedSkill={selectedSkill}
           onSelectSkill={handleSelectSkill}
           lang={lang}
@@ -160,10 +156,10 @@ export default function App() {
         isOpen={resumeOpen}
         onClose={() => setResumeOpen(false)}
         profile={profile}
-        experiences={experiencesData}
+        experiences={currentExperiences}
         education={educationData}
         certifications={certificationsData}
-        projects={projectsData}
+        projects={currentProjects}
         lang={lang}
       />
     </div>

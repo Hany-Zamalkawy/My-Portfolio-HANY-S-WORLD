@@ -23,7 +23,7 @@ export default function EducationSection({ education, certifications, lang }: Ed
         {/* Header */}
         <div className="space-y-3">
           <h2 className="font-sans text-3xl font-black flex items-center gap-4 text-[#dce5d9]">
-            <span className="text-[#4be277] font-mono text-lg font-medium">03.</span> {t.education}
+            <span className="text-[#4be277] font-mono text-lg font-medium">04.</span> {t.education}
           </h2>
           <div className="h-[2px] w-16 bg-[#4be277]" />
           <p className="text-[#bccbb9] text-sm max-w-xl">
